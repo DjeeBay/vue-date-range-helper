@@ -1,11 +1,11 @@
 {
   "name": "vue-date-range-helper",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Date inputs with range helper buttons",
   "main": "./dist/index.js",
   "scripts": {
-    "dev": "vue serve NiceHandsomeButton.vue",
+    "dev": "vue serve VueDateRangeHelper.vue",
     "build": "bili --name index --plugin vue --vue.css false"
   },
   "files": [

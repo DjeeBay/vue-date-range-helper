@@ -2,11 +2,11 @@
     <div>
         <div class="row">
             <div class="col-md-6">
-                <label for="startDate">Du</label>
+                <label for="startDate">{{fromLabel}}</label>
                 <input type="date" v-model="start" v-on:change="startChanged" id="startDate" :class="inputClasses">
             </div>
             <div class="col-md-6">
-                <label for="endDate">Au</label>
+                <label for="endDate">{{toLabel}}</label>
                 <input type="date" v-model="end" v-on:change="endChanged" id="endDate" :class="inputClasses">
             </div>
             <div class="col-12">
@@ -40,6 +40,11 @@ export default {
             type: Date,
             required: false
         },
+        fromLabel: {
+            type: String,
+            required: false,
+            default: 'From'
+        },
         inputClasses: {
             type: String,
             required: false,
@@ -48,6 +53,11 @@ export default {
         startDate: {
             type: Date,
             required: false
+        },
+        toLabel: {
+            type: String,
+            required: false,
+            default: 'To'
         },
     },
     methods: {

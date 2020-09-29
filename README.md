@@ -1,1 +1,59 @@
-vue-date-range-helper
+<h1 align="center">Vue Date Range Helper</h1>
+
+### Introduction
+VueJS (2) Component with two inputs (type date) with extra helper buttons to range dates
+
+### Features
+<ul>
+<li>Pre-selected dates</li>
+<li>Uses user locale</li>
+<li>Custom CSS</li>
+<li>Events</li>
+<li>Default styles with Bootstrap 4</li>
+</ul>
+
+## Installing
+
+Install with npm:
+```bash
+npm install --save vue-good-table
+```
+
+Import globally in app:
+
+```javascript
+import VueDateRangeHelperPlugin from 'vue-date-range-helper';
+
+Vue.use(VueDateRangeHelperPlugin);
+```
+
+Import into your component
+```javascript
+import { VueDateRangeHelper } from 'vue-date-range-helper';
+
+// add to component
+components: {
+  VueDateRangeHelper
+}
+```
+
+Use in your project
+```vue
+<v-date-range-helper
+    :end-date="new Date()"
+    :start-date="new Date()"
+    button-classes="btn btn-sm btn-ghost-info"
+    input-classes="form-control form-control-sm"
+    from-label="From"
+    to-label="To"
+    @end-date-changed="updateYourEndDate"
+    @start-date-changed="updateYourStartDate"
+></v-date-range-helper>
+```
+
+### Main Technologies
+
+<ul>
+<li>moment.js</li>
+<li>Bootstrap 4</li>
+</ul>
