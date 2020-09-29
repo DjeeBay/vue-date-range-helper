@@ -1,5 +1,5 @@
 /*!
- * vue-date-range-helper v0.0.3
+ * vue-date-range-helper v0.0.5
  * (c) Julien Barach
  * Released under the MIT License.
  */
@@ -56,7 +56,7 @@ var script = {
       return moment__default['default']().locale(this.inputLocale ? this.inputLocale : window.navigator.language).format('MMMM');
     },
     getCurrentYear: function getCurrentYear() {
-      return moment__default['default']().year();
+      return moment__default['default']().locale(this.inputLocale ? this.inputLocale : window.navigator.language).year();
     },
     setCurrent: function setCurrent(type) {
       this.start = moment__default['default']().startOf(type).format(moment__default['default'].HTML5_FMT.DATE);
@@ -312,7 +312,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-43690b04";
+var __vue_scope_id__ = "data-v-5e7403fa";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;

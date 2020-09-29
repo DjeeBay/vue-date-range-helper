@@ -72,7 +72,7 @@ export default {
             return moment().locale(this.inputLocale ? this.inputLocale : window.navigator.language).format('MMMM')
         },
         getCurrentYear() {
-            return moment().year()
+            return moment().locale(this.inputLocale ? this.inputLocale : window.navigator.language).year()
         },
         setCurrent(type) {
             this.start = moment().startOf(type).format(moment.HTML5_FMT.DATE)
