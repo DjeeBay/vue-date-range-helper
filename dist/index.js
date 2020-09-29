@@ -1,5 +1,5 @@
 /*!
- * vue-date-range-helper v1.0.1
+ * vue-date-range-helper v1.0.2
  * (c) Julien Barach <julien.barach@gmail.com>
  * Released under the MIT License.
  */
@@ -17,12 +17,12 @@ var script = {
   props: {
     buttonsCssClasses: {
       type: String,
-      required: false
+      required: false,
+      "default": 'btn btn-sm btn-ghost-info'
     },
     customCssClasses: {
       type: String,
-      required: false,
-      "default": 'btn btn-sm btn-ghost-info'
+      required: false
     },
     endDate: {
       type: Date,
@@ -328,7 +328,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-367b8f84";
+var __vue_scope_id__ = "data-v-6eb21278";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;
