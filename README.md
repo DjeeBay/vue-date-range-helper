@@ -3,6 +3,10 @@
 ### Introduction
 VueJS (2) Component with two inputs (type date) with extra helper buttons to range dates
 
+<p align="center">
+  <img src="https://s1.gifyu.com/images/vdrh.png" alt="vdrh" border="0" />
+</p>
+
 ### Features
 <ul>
 <li>Pre-selected dates</li>
