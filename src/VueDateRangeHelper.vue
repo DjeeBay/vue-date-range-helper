@@ -62,12 +62,16 @@ export default {
         },
         setCurrent(type) {
             this.start = moment().startOf(type).format(moment.HTML5_FMT.DATE)
+            this.$emit('start-date-changed', this.start)
             this.end = moment().endOf(type).format(moment.HTML5_FMT.DATE)
+            this.$emit('end-date-changed', this.end)
         },
         setShift(amount, type) {
             let referential = this.start ? moment(this.start)[type]() : moment()[type]()
             this.start = moment()[type]((referential + amount)).startOf(type).format(moment.HTML5_FMT.DATE)
+            this.$emit('start-date-changed', this.start)
             this.end = moment(this.start).endOf(type).format(moment.HTML5_FMT.DATE)
+            this.$emit('end-date-changed', this.end)
         },
         startChanged(ev) {
             this.$emit('start-date-changed', ev.target.value)
