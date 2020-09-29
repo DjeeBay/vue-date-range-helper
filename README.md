@@ -46,8 +46,9 @@ Use in your project
 <v-date-range-helper
     :end-date="new Date()"
     :start-date="new Date()"
-    button-classes="btn btn-sm btn-ghost-info"
-    input-classes="form-control form-control-sm"
+    button-css-classes="myCustomCss"
+    button-css-classes="btn btn-sm btn-ghost-info"
+    input-css-classes="form-control form-control-sm"
     from-label="From"
     to-label="To"
     month-label="Month"

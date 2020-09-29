@@ -1,5 +1,5 @@
 /*!
- * vue-date-range-helper v0.0.6
+ * vue-date-range-helper v0.0.7
  * (c) Julien Barach
  * Released under the MIT License.
  */
@@ -15,7 +15,12 @@ var moment__default = /*#__PURE__*/_interopDefaultLegacy(moment);
 var script = {
   name: 'DateRangeHelper',
   props: {
-    buttonsClasses: {
+    buttonsCssClasses: {
+      type: String,
+      required: false,
+      "default": 'btn btn-sm btn-ghost-info'
+    },
+    customCssClasses: {
       type: String,
       required: false,
       "default": 'btn btn-sm btn-ghost-info'
@@ -29,7 +34,7 @@ var script = {
       required: false,
       "default": 'From'
     },
-    inputClasses: {
+    inputCssClasses: {
       type: String,
       required: false,
       "default": 'form-control'
@@ -183,7 +188,9 @@ var __vue_render__ = function __vue_render__() {
 
   var _c = _vm._self._c || _h;
 
-  return _c('div', [_c('div', {
+  return _c('div', {
+    "class": _vm.customCssClasses
+  }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-6"
@@ -198,7 +205,7 @@ var __vue_render__ = function __vue_render__() {
       value: _vm.start,
       expression: "start"
     }],
-    "class": _vm.inputClasses,
+    "class": _vm.inputCssClasses,
     attrs: {
       "type": "date",
       "id": "startDate"
@@ -229,7 +236,7 @@ var __vue_render__ = function __vue_render__() {
       value: _vm.end,
       expression: "end"
     }],
-    "class": _vm.inputClasses,
+    "class": _vm.inputCssClasses,
     attrs: {
       "type": "date",
       "id": "endDate"
@@ -252,7 +259,7 @@ var __vue_render__ = function __vue_render__() {
   }, [_c('div', {
     staticClass: "text-center"
   }, [_c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -262,7 +269,7 @@ var __vue_render__ = function __vue_render__() {
       }
     }
   }, [_c('small', [_vm._v("-1")])]), _vm._v(" "), _c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -272,7 +279,7 @@ var __vue_render__ = function __vue_render__() {
       }
     }
   }, [_c('small', [_vm._v(_vm._s(_vm.yearLabel) + " (" + _vm._s(_vm.getCurrentYear()) + ")")])]), _vm._v(" "), _c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -284,7 +291,7 @@ var __vue_render__ = function __vue_render__() {
   }, [_c('small', [_vm._v("+1")])])]), _vm._v(" "), _c('div', {
     staticClass: "text-center"
   }, [_c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -294,7 +301,7 @@ var __vue_render__ = function __vue_render__() {
       }
     }
   }, [_c('small', [_vm._v("-1")])]), _vm._v(" "), _c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -304,7 +311,7 @@ var __vue_render__ = function __vue_render__() {
       }
     }
   }, [_c('small', [_vm._v(_vm._s(_vm.monthLabel) + " (" + _vm._s(_vm.getCurrentMonth()) + ")")])]), _vm._v(" "), _c('button', {
-    "class": _vm.buttonsClasses,
+    "class": _vm.buttonsCssClasses,
     attrs: {
       "type": "button"
     },
@@ -322,7 +329,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-48a64634";
+var __vue_scope_id__ = "data-v-0c13d1a4";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;

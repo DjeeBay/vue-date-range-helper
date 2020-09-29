@@ -1,24 +1,24 @@
 <template>
-    <div>
+    <div :class="customCssClasses">
         <div class="row">
             <div class="col-md-6">
                 <label for="startDate">{{fromLabel}}</label>
-                <input type="date" v-model="start" v-on:change="startChanged" id="startDate" :class="inputClasses">
+                <input type="date" v-model="start" v-on:change="startChanged" id="startDate" :class="inputCssClasses">
             </div>
             <div class="col-md-6">
                 <label for="endDate">{{toLabel}}</label>
-                <input type="date" v-model="end" v-on:change="endChanged" id="endDate" :class="inputClasses">
+                <input type="date" v-model="end" v-on:change="endChanged" id="endDate" :class="inputCssClasses">
             </div>
             <div class="col-12">
                 <div class="text-center">
-                    <button type="button" v-on:click="setShift(-1, 'year')" :class="buttonsClasses"><small>-1</small></button>
-                    <button type="button" v-on:click="setCurrent('year')" :class="buttonsClasses"><small>{{yearLabel}} ({{getCurrentYear()}})</small></button>
-                    <button type="button" v-on:click="setShift(1, 'year')" :class="buttonsClasses"><small>+1</small></button>
+                    <button type="button" v-on:click="setShift(-1, 'year')" :class="buttonsCssClasses"><small>-1</small></button>
+                    <button type="button" v-on:click="setCurrent('year')" :class="buttonsCssClasses"><small>{{yearLabel}} ({{getCurrentYear()}})</small></button>
+                    <button type="button" v-on:click="setShift(1, 'year')" :class="buttonsCssClasses"><small>+1</small></button>
                 </div>
                 <div class="text-center">
-                    <button type="button" v-on:click="setShift(-1, 'month')" :class="buttonsClasses"><small>-1</small></button>
-                    <button type="button" v-on:click="setCurrent('month')" :class="buttonsClasses"><small>{{monthLabel}} ({{getCurrentMonth()}})</small></button>
-                    <button type="button" v-on:click="setShift(1, 'month')" :class="buttonsClasses"><small>+1</small></button>
+                    <button type="button" v-on:click="setShift(-1, 'month')" :class="buttonsCssClasses"><small>-1</small></button>
+                    <button type="button" v-on:click="setCurrent('month')" :class="buttonsCssClasses"><small>{{monthLabel}} ({{getCurrentMonth()}})</small></button>
+                    <button type="button" v-on:click="setShift(1, 'month')" :class="buttonsCssClasses"><small>+1</small></button>
                 </div>
             </div>
         </div>
@@ -31,7 +31,12 @@ import moment from 'moment'
 export default {
     name: 'DateRangeHelper',
     props: {
-        buttonsClasses: {
+        buttonsCssClasses: {
+            type: String,
+            required: false,
+            default: 'btn btn-sm btn-ghost-info'
+        },
+        customCssClasses: {
             type: String,
             required: false,
             default: 'btn btn-sm btn-ghost-info'
@@ -45,7 +50,7 @@ export default {
             required: false,
             default: 'From'
         },
-        inputClasses: {
+        inputCssClasses: {
             type: String,
             required: false,
             default: 'form-control'
