@@ -34,11 +34,11 @@ export default {
         buttonsCssClasses: {
             type: String,
             required: false,
+            default: 'btn btn-sm btn-ghost-info'
         },
         customCssClasses: {
             type: String,
             required: false,
-            default: 'btn btn-sm btn-ghost-info'
         },
         endDate: {
             type: Date,
