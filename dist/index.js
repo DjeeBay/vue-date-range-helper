@@ -1,5 +1,5 @@
 /*!
- * vue-daterange-helper v0.0.1
+ * vue-date-range-helper v0.0.1
  * (c) Julien Barach
  * Released under the MIT License.
  */
