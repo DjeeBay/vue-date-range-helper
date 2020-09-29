@@ -50,6 +50,10 @@ export default {
             required: false,
             default: 'form-control'
         },
+        inputLocale: {
+            type: String,
+            required: false
+        },
         startDate: {
             type: Date,
             required: false
@@ -65,7 +69,7 @@ export default {
             this.$emit('end-date-changed', ev.target.value)
         },
         getCurrentMonth() {
-            return moment().locale(window.navigator.language).format('MMMM')
+            return moment().locale(this.inputLocale ? this.inputLocale : window.navigator.language).format('MMMM')
         },
         getCurrentYear() {
             return moment().year()

@@ -34,6 +34,10 @@ var script = {
       required: false,
       "default": 'form-control'
     },
+    inputLocale: {
+      type: String,
+      required: false
+    },
     startDate: {
       type: Date,
       required: false
@@ -49,7 +53,7 @@ var script = {
       this.$emit('end-date-changed', ev.target.value);
     },
     getCurrentMonth: function getCurrentMonth() {
-      return moment__default['default']().locale(window.navigator.language).format('MMMM');
+      return moment__default['default']().locale(this.inputLocale ? this.inputLocale : window.navigator.language).format('MMMM');
     },
     getCurrentYear: function getCurrentYear() {
       return moment__default['default']().year();
@@ -308,7 +312,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-d3358568";
+var __vue_scope_id__ = "data-v-43690b04";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;

@@ -16,7 +16,7 @@ VueJS (2) Component with two inputs (type date) with extra helper buttons to ran
 
 Install with npm:
 ```bash
-npm install --save vue-good-table
+npm install --save vue-date-range-helper
 ```
 
 Import globally in app:
@@ -46,6 +46,7 @@ Use in your project
     input-classes="form-control form-control-sm"
     from-label="From"
     to-label="To"
+    input-locale="fr"
     @end-date-changed="updateYourEndDate"
     @start-date-changed="updateYourStartDate"
 ></v-date-range-helper>
