@@ -1,6 +1,6 @@
 /*!
- * vue-date-range-helper v0.0.7
- * (c) Julien Barach
+ * vue-date-range-helper v1.0.0
+ * (c) Julien Barach <julien.barach@gmail.com>
  * Released under the MIT License.
  */
 'use strict';

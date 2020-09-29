@@ -1,7 +1,7 @@
 {
   "name": "vue-date-range-helper",
   "private": false,
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Date inputs with range helper buttons",
   "main": "./dist/index.js",
   "scripts": {
@@ -9,9 +9,20 @@
     "build": "bili --name index --plugin vue --vue.css false"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/*"
   ],
-  "author": "Julien Barach",
+  "repository": "github:DjeeBay/vue-date-range-helper",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "daterange",
+    "date helper"
+  ],
+  "author": {
+    "name": "Julien Barach",
+    "email": "julien.barach@gmail.com"
+  },
   "license": "MIT",
   "dependencies": {
     "moment": "^2.29.0"
