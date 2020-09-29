@@ -34,7 +34,6 @@ export default {
         buttonsCssClasses: {
             type: String,
             required: false,
-            default: 'btn btn-sm btn-ghost-info'
         },
         customCssClasses: {
             type: String,

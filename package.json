@@ -1,7 +1,7 @@
 {
   "name": "vue-date-range-helper",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Date inputs with range helper buttons",
   "main": "./dist/index.js",
   "scripts": {
