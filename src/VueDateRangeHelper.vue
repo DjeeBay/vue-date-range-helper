@@ -12,12 +12,12 @@
             <div class="col-12">
                 <div class="text-center">
                     <button type="button" v-on:click="setShift(-1, 'year')" :class="buttonsClasses"><small>-1</small></button>
-                    <button type="button" v-on:click="setCurrent('year')" :class="buttonsClasses"><small>Année ({{getCurrentYear()}})</small></button>
+                    <button type="button" v-on:click="setCurrent('year')" :class="buttonsClasses"><small>{{yearLabel}} ({{getCurrentYear()}})</small></button>
                     <button type="button" v-on:click="setShift(1, 'year')" :class="buttonsClasses"><small>+1</small></button>
                 </div>
                 <div class="text-center">
                     <button type="button" v-on:click="setShift(-1, 'month')" :class="buttonsClasses"><small>-1</small></button>
-                    <button type="button" v-on:click="setCurrent('month')" :class="buttonsClasses"><small>Mois ({{getCurrentMonth()}})</small></button>
+                    <button type="button" v-on:click="setCurrent('month')" :class="buttonsClasses"><small>{{monthLabel}} ({{getCurrentMonth()}})</small></button>
                     <button type="button" v-on:click="setShift(1, 'month')" :class="buttonsClasses"><small>+1</small></button>
                 </div>
             </div>
@@ -54,6 +54,11 @@ export default {
             type: String,
             required: false
         },
+        monthLabel: {
+            type: String,
+            required: false,
+            default: 'Year'
+        },
         startDate: {
             type: Date,
             required: false
@@ -62,6 +67,11 @@ export default {
             type: String,
             required: false,
             default: 'To'
+        },
+        yearLabel: {
+            type: String,
+            required: false,
+            default: 'Year'
         },
     },
     methods: {

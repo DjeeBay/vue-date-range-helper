@@ -50,6 +50,8 @@ Use in your project
     input-classes="form-control form-control-sm"
     from-label="From"
     to-label="To"
+    month-label="Month"
+    year-label="Year"
     input-locale="fr"
     @end-date-changed="updateYourEndDate"
     @start-date-changed="updateYourStartDate"

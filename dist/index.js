@@ -1,5 +1,5 @@
 /*!
- * vue-date-range-helper v0.0.5
+ * vue-date-range-helper v0.0.6
  * (c) Julien Barach
  * Released under the MIT License.
  */
@@ -38,6 +38,11 @@ var script = {
       type: String,
       required: false
     },
+    monthLabel: {
+      type: String,
+      required: false,
+      "default": 'Year'
+    },
     startDate: {
       type: Date,
       required: false
@@ -46,6 +51,11 @@ var script = {
       type: String,
       required: false,
       "default": 'To'
+    },
+    yearLabel: {
+      type: String,
+      required: false,
+      "default": 'Year'
     }
   },
   methods: {
@@ -261,7 +271,7 @@ var __vue_render__ = function __vue_render__() {
         return _vm.setCurrent('year');
       }
     }
-  }, [_c('small', [_vm._v("Année (" + _vm._s(_vm.getCurrentYear()) + ")")])]), _vm._v(" "), _c('button', {
+  }, [_c('small', [_vm._v(_vm._s(_vm.yearLabel) + " (" + _vm._s(_vm.getCurrentYear()) + ")")])]), _vm._v(" "), _c('button', {
     "class": _vm.buttonsClasses,
     attrs: {
       "type": "button"
@@ -293,7 +303,7 @@ var __vue_render__ = function __vue_render__() {
         return _vm.setCurrent('month');
       }
     }
-  }, [_c('small', [_vm._v("Mois (" + _vm._s(_vm.getCurrentMonth()) + ")")])]), _vm._v(" "), _c('button', {
+  }, [_c('small', [_vm._v(_vm._s(_vm.monthLabel) + " (" + _vm._s(_vm.getCurrentMonth()) + ")")])]), _vm._v(" "), _c('button', {
     "class": _vm.buttonsClasses,
     attrs: {
       "type": "button"
@@ -312,7 +322,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-5e7403fa";
+var __vue_scope_id__ = "data-v-48a64634";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;
