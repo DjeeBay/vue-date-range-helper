@@ -1,0 +1,24 @@
+{
+  "name": "vue-daterange-helper",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Date inputs with range helper buttons",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vue serve NiceHandsomeButton.vue",
+    "build": "bili --name index --plugin vue --vue.css false"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "author": "Julien Barach",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.29.0"
+  },
+  "devDependencies": {
+    "bili": "^5.0.5",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
