@@ -1,5 +1,5 @@
 /*!
- * vue-date-range-helper v0.0.1
+ * vue-date-range-helper v0.0.3
  * (c) Julien Barach
  * Released under the MIT License.
  */
@@ -24,6 +24,11 @@ var script = {
       type: Date,
       required: false
     },
+    fromLabel: {
+      type: String,
+      required: false,
+      "default": 'From'
+    },
     inputClasses: {
       type: String,
       required: false,
@@ -32,6 +37,11 @@ var script = {
     startDate: {
       type: Date,
       required: false
+    },
+    toLabel: {
+      type: String,
+      required: false,
+      "default": 'To'
     }
   },
   methods: {
@@ -46,12 +56,16 @@ var script = {
     },
     setCurrent: function setCurrent(type) {
       this.start = moment__default['default']().startOf(type).format(moment__default['default'].HTML5_FMT.DATE);
+      this.$emit('start-date-changed', this.start);
       this.end = moment__default['default']().endOf(type).format(moment__default['default'].HTML5_FMT.DATE);
+      this.$emit('end-date-changed', this.end);
     },
     setShift: function setShift(amount, type) {
       var referential = this.start ? moment__default['default'](this.start)[type]() : moment__default['default']()[type]();
       this.start = moment__default['default']()[type](referential + amount).startOf(type).format(moment__default['default'].HTML5_FMT.DATE);
+      this.$emit('start-date-changed', this.start);
       this.end = moment__default['default'](this.start).endOf(type).format(moment__default['default'].HTML5_FMT.DATE);
+      this.$emit('end-date-changed', this.end);
     },
     startChanged: function startChanged(ev) {
       this.$emit('start-date-changed', ev.target.value);
@@ -163,7 +177,7 @@ var __vue_render__ = function __vue_render__() {
     attrs: {
       "for": "startDate"
     }
-  }, [_vm._v("Du")]), _vm._v(" "), _c('input', {
+  }, [_vm._v(_vm._s(_vm.fromLabel))]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -194,7 +208,7 @@ var __vue_render__ = function __vue_render__() {
     attrs: {
       "for": "endDate"
     }
-  }, [_vm._v("Au")]), _vm._v(" "), _c('input', {
+  }, [_vm._v(_vm._s(_vm.toLabel))]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -294,7 +308,7 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-fb4f0d50";
+var __vue_scope_id__ = "data-v-d3358568";
 /* module identifier */
 
 var __vue_module_identifier__ = undefined;
